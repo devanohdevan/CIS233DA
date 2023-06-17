@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 40px;
+  display: flex;
+  border: 2px solid black;
+  background-color: blanchedalmond;
+}
+
+.header {
+  padding: 3% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content {
+  margin: 40px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: blanchedalmond;
+  display: ;
+}
+
+.footer {
+  margin: 40px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: blanchedalmond;
+}
+
+.header {
+  flex: 3;
+  text-align: center;
+}
