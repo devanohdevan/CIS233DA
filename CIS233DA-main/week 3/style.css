@@ -15,26 +15,12 @@
   align-items: center;
 }
 
-.main-content {
-  margin: 40px;
-  border: 1px solid black;
-  padding: 20px;
-  background-color: blanchedalmond;
-}
-
-.footer {
-  margin: 40px;
-  border: 1px solid black;
-  padding: 20px;
-  background-color: blanchedalmond;
-}
-
 .header {
   list-style-type: none;
   margin: 0;
   padding: 0;
   justify-content: space-around;
-  background-color: #333;
+  background-color: blanchedalmond;
 }
 
 .header {
@@ -50,7 +36,7 @@
 }
 
 .header ul li a:hover {
-  color: #ff0000; /* Change the color to your desired hover effect */
+  color: black; /* Change the color to your desired hover effect */
 }
 
 .main-content {
@@ -104,7 +90,7 @@ h1 {
 }
 
 h1 {
-  background-color: #f2f2f2;
+  background-color: blanchedalmond;
 }
 
 p {
@@ -131,4 +117,29 @@ p {
 
 p:hover {
   color: #3002ff;
+}
+
+.header ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 3em;
+  position: relative;
+}
+
+.header ul li a {
+  color: black;
+  text-decoration: center;
+  font-size: 16px;
+}
+.header ul li a::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  background: black;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+.header ul li a:hover::after {
+  width: 100%;
 }
