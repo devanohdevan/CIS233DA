@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Locations Page</title>
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <picture>
+      <source srcset="wireframe-small.jpg" media="(max-width: 600px)" />
+      <source
+        srcset="wireframe-medium.jpg"
+        media="(min-width: 601px) and (max-width: 1024px)"
+      />
+      <source srcset="wireframe-large.jpg" media="(min-width: 1025px)" />
+      <img src="wireframe-large.jpg" alt="Oahu" width="500px" height="400px" />
+    </picture>
+
     <div>
       <section class="bar">
         <nav>
@@ -36,9 +46,9 @@
         compassion, and it's a significant part of Hawaiian culture.
       </p>
 
-      <img src="oahu.jpg" width="500px" height="400px" >
-      <img src="honolulu.jpeg" width="500px" height="400px" >
-      <img src="beaten path.jpg" width="500px" height="400px" >
+      <img src="oahu.jpg" width="500px" height="400px" />
+      <img src="honolulu.jpeg" width="500px" height="400px" />
+      <img src="beaten path.jpg" width="500px" height="400px" />
       <div class="video-container">
         <iframe
           width="560"
@@ -51,8 +61,6 @@
         ></iframe>
       </div>
     </section>
-
-
 
     <section id="Sea Creatures"></section>
 

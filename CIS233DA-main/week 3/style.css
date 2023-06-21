@@ -3,6 +3,95 @@
   padding: 0;
 }
 
+@media (max-width: 600px) {
+  .header {
+    margin: 20px;
+    padding: 2% 4%;
+  }
+
+  .header ul li {
+    padding: 5px;
+  }
+
+  img {
+    border-width: 0.5px;
+    border-radius: 3px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+/* Styles for screen widths between 600px and 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .header {
+    margin: 30px;
+    padding: 2.5% 5%;
+  }
+
+  .header ul li {
+    padding: 8px;
+  }
+
+  img {
+    border-width: 1px;
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-right: 7px;
+  }
+}
+
+/* Styles for screen widths larger than 1024px */
+@media (min-width: 1025px) {
+  .header {
+    margin: 40px;
+    padding: 3% 6%;
+  }
+
+  .header ul li {
+    padding: 10px;
+  }
+
+  img {
+    border-width: 1px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
+@font-face {
+  font-family: "YourFontName";
+  src: url("your-font-file.woff2") format("woff2"),
+    url("your-font-file.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "YourFontName", sans-serif;
+}
+
 .header {
   margin: 40px;
   border: 2px solid black;
@@ -108,6 +197,14 @@ p:hover {
   color: #3002ff;
 }
 
+h1 {
+  color: rgb(255, 0, 0);
+}
+
+p {
+  background-color: rgb(0, 128, 0);
+}
+
 .header ul li {
   list-style: none;
   display: inline-block;
@@ -147,81 +244,4 @@ p:hover {
 
 p {
   background-color: blanchedalmond;
-}
-
-@media (max-width: 600px) {
-  .header {
-    margin: 20px;
-    padding: 2% 4%;
-  }
-
-  .header ul li {
-    padding: 5px;
-  }
-
-  img {
-    border-width: 0.5px;
-    border-radius: 3px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-}
-
-/* Styles for screen widths between 600px and 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .header {
-    margin: 30px;
-    padding: 2.5% 5%;
-  }
-
-  .header ul li {
-    padding: 8px;
-  }
-
-  img {
-    border-width: 1px;
-    border-radius: 4px;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  p {
-    font-size: 15px;
-    margin-right: 7px;
-  }
-}
-
-/* Styles for screen widths larger than 1024px */
-@media (min-width: 1025px) {
-  .header {
-    margin: 40px;
-    padding: 3% 6%;
-  }
-
-  .header ul li {
-    padding: 10px;
-  }
-
-  img {
-    border-width: 1px;
-    border-radius: 5px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 16px;
-    margin-right: 10px;
-  }
 }
