@@ -4,23 +4,23 @@ function showTime(){
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "AM";
-    
+
     if(h == 0){
         h = 12;
     }
-    
+
     if(h > 12){
         h = h - 12;
         session = "PM";
     }
-    
+
     h = (h < 10) ? h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
-    
+
     var time = h + ":" + m + ":" + s + " " + session;
     document.getElementById("time").innerText = time;
     document.getElementById("time").textContent = time;
-    
+
     setTimeout(showTime, 1000);
 }
