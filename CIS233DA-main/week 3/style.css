@@ -1,8 +1,92 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Global styles */
+body {
+  font-family: "YourFontName", sans-serif;
+}
+
+/* Header */
+.header {
+  margin: 40px;
+  border: 2px solid black;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 6%;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: blanchedalmond;
+  padding: 10px;
+}
+
+.header ul li {
+  padding: 10px;
+}
+
+.header ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header ul li a:hover {
+  color: #000;
+}
+
+/* Images */
+img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  filter: brightness(1.15) contrast(1.15) saturate(1.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Typography */
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  background-color: blanchedalmond;
+  color: #ff0000;
+  padding: 10px;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  padding: 10px;
+  float: left;
+  margin-right: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease-in-out;
+}
+
+p:hover {
+  color: #3002ff;
+  background-color: rgb(0, 128, 0);
+}
+
+/* Media Queries */
 @media (max-width: 600px) {
   .header {
     margin: 20px;
@@ -28,7 +112,6 @@
   }
 }
 
-/* Styles for screen widths between 600px and 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
   .header {
     margin: 30px;
@@ -54,7 +137,6 @@
   }
 }
 
-/* Styles for screen widths larger than 1024px */
 @media (min-width: 1025px) {
   .header {
     margin: 40px;
@@ -80,168 +162,28 @@
   }
 }
 
-@font-face {
-  font-family: "YourFontName";
-  src: url("your-font-file.woff2") format("woff2"),
-    url("your-font-file.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
 }
 
-body {
-  font-family: "YourFontName", sans-serif;
+nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
 }
 
-.header {
-  margin: 40px;
-  border: 2px solid black;
-  background-color: blanchedalmond;
+nav ul li:hover {
+  transform: translateY(-5px);
 }
 
-.header {
-  padding: 3% 6%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: space-around;
-  background-color: blanchedalmond;
-}
-
-.header {
-  padding: 10px;
-  text-align: center;
-  margin-right: 10px;
-}
-
-.header ul li a {
-  color: #fff;
+nav ul li a {
   text-decoration: none;
+  color: #ffffff; /* White */
   transition: color 0.3s ease;
 }
 
-.header ul li a:hover {
-  color: black; /* Change the color to your desired hover effect */
-}
-
-img {
-  border: 1px solid #ddd;
-}
-
-img {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-img {
-  border-radius: 5px;
-}
-
-img {
-  filter: brightness(1.15) contrast(1.15) saturate(1.15);
-}
-
-img {
-  transition: transform 0.3s ease-in-out;
-}
-img:hover {
-  transform: scale(1.1);
-}
-
-h1 {
-  font-family: "Arial", sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-p {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #666;
-}
-
-h1 {
-  text-align: center;
-}
-
-h1 {
-  background-color: blanchedalmond;
-}
-
-p {
-  background-color: #f2f2f2;
-  border: 2px solid #ccc;
-  padding: 10px;
-}
-
-p {
-  font-size: 16px;
-  float: left;
-  margin-right: 10px;
-  color: #080000;
-}
-
-p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-p {
-  transition: color 0.3s ease-in-out;
-}
-
-p:hover {
-  color: #3002ff;
-}
-
-h1 {
-  color: rgb(255, 0, 0);
-}
-
-p {
-  background-color: rgb(0, 128, 0);
-}
-
-.header ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 5px 3em;
-  position: relative;
-}
-
-.header ul li a {
-  color: black;
-  text-decoration: center;
-  font-size: 16px;
-}
-.header ul li a::after {
-  content: "";
-  width: 0%;
-  height: 4px;
-  background: black;
-  display: block;
-  margin: auto;
-  transition: 0.5s ease-in-out;
-}
-.header ul li a:hover::after {
-  width: 100%;
-}
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.video-container iframe {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-p {
-  background-color: blanchedalmond;
+nav ul li a:hover {
+  color: #ffd700; /* Gold */
 }
