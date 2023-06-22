@@ -9,7 +9,7 @@ showTime();
       document.getElementById("bttnGasImg").src = "assets/images/bttn_gas_1.png";
     } else {
       gasLevel = 0;
-      document.getElementById("gasImg").src = "assets/images/gas0.png";
+      document.getElementById("gas").src = "assets/images/gas0.png";
       document.getElementById("bttnGasImg").src = "assets/images/bttn_gas_0.png";
     }
   }
