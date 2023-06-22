@@ -1,12 +1,7 @@
-function showTime() {
-    var date = new Date();
-    var time = date.toLocaleTimeString();
-    console.log("Current time: " + time);
-    // Add your code to display the time
-  }
-  
+showTime();
+
   var gasLevel = 0;
-  
+
   function getGas() {
     if (gasLevel === 0) {
       gasLevel = 1;
