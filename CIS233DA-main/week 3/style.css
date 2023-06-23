@@ -162,7 +162,6 @@ p:hover {
   }
 }
 
-
 nav ul {
   display: flex;
   list-style: none;
@@ -186,4 +185,13 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ffd700; /* Gold */
+}
+
+@font-face {
+  font-family: pizza;
+  src: url(DancingScript-Regular.ttf");
+}
+
+body {
+  font-family: "pizza", "dancingscript";
 }
