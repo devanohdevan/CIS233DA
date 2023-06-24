@@ -1,0 +1,28 @@
+.calander{
+    display: grid;
+    grid-template-columns: repeat(7, 3fr);
+        grid-gap: 10px;
+  }
+  
+   .day {
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 10px;
+        text-align:right;
+      }
+  
+   .birthday {
+     background-color: lightblue;
+     color: #fff;
+     text-align: right;
+     border-radius: 10px;
+      }
+  
+  h1{
+    text-align: center;
+  }
+  
+  .month{
+     border-radius: 10px;
+    background-color: lightblue;
+  }
