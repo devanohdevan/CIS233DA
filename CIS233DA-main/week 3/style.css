@@ -187,6 +187,7 @@ nav ul li a:hover {
   color: #ffd700; /* Gold */
 }
 
+<<<<<<< Updated upstream
 @font-face {
   font-family: pizza;
   src: url(./fonts/DancingScript-Regular.otf);
@@ -195,3 +196,6 @@ nav ul li a:hover {
 body {
   font-family: "pizza", "dancingscript";
 }
+=======
+
+>>>>>>> Stashed changes
