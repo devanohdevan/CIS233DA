@@ -189,7 +189,7 @@ nav ul li a:hover {
 
 @font-face {
   font-family: pizza;
-  src: url(DancingScript-Regular.ttf);
+  src: url(./fonts/DancingScript-Regular.otf);
 }
 
 body {
