@@ -15,5 +15,4 @@ function changecity(city) {
   window.addEventListener('DOMContentLoaded', function () {
     changecity('honolulu');
   });
-  
-  
+ 

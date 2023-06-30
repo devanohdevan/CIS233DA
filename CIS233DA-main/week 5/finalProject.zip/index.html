@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hawaii weather app</title>
+</head>
+<body>
+
+    <main>
+        <div id="myBg">
+          <img id="imageid" src="./photos/sunset.jpg" />
+        </div>
+        <div class="container justify-content-center d-flex align-items-center">
+          <div>
+            <h1 class="text-center mt-4">Hawaii: Weather</h1>
+          </div>
+          <div class="card rounded-5 p-5 m-5">
+            <!-- City Search Stuff -->
+            <select id="cityDropdown" class="ui search dropdown mb-4 d-flex align-items-center">
+
+            </select>
+
+            <!-- City Content -->
+            <div class="weather">
+              <h2 id="city" class="city mb-3">Weather in the City</h2>
+              <div id="temp" class="temp h1 mb-4">°F</div>
+              <div id="description" class="description">Cloudy with a chance of meatballs.</div>
+              <div id="winds" class="wind"></div>
+            </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2023 Your Company. All rights reserved.</p>
+      </footer>
+
+</body>
+
+ <!-- SCRIPTS -->
+ <script src="cities.js"></script>
+ <script src="weatherapi.js"></script>
+
+  <!-- Semantic UI Dropdown -->
+<script>
+$(".ui.dropdown").dropdown();
+
+// Prevents Users From Dragging Image For Downloads
+const img = document.querySelector('img')
+img.ondragstart = () => {
+return false;
+};
+</script>
+
+</html>
+
