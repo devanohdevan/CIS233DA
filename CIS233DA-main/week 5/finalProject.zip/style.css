@@ -18,10 +18,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Change height to min-height for centering */
+    min-height: 100vh;
     flex-direction: column;
-    position: relative; /* Add position relative to allow footer positioning */
-    z-index: 1; /* Ensure the content is above the background image */
+    position: relative;
+    z-index: 1;
   }
 
   h1 {
@@ -34,10 +34,12 @@ body {
 
   .card {
     color: white;
-    background: #000000d0;
+    background: rgba(0, 0, 0, 0.7);
     max-width: 500px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
+    padding: 20px;
+    text-align: center;
   }
 
   input.search {
@@ -92,7 +94,7 @@ body {
     display: block;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    object-fit: cover; /* or object-fit: contain; */
   }
 
       /* Media query for screens with a maximum width of 768px (smartphone) */

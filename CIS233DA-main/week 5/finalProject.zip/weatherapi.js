@@ -28,7 +28,7 @@ function initCityDropdown() {
     }
 }
 
-// Grab the latitude and longitude from selected city 
+// Grab the latitude and longitude from selected city
 function getWeather() {
     for (let city of cities) {
         if (city.name == cityDropdown.value) {
@@ -72,8 +72,8 @@ function displayWeather(data) {
 // Clears fields if API unavailable
 function emptyFields() {
     cityTemp.innerHTML = ``
-    cityDescription.innerHTML = 
-    `Sorry, currently can't find the details on this city. 
+    cityDescription.innerHTML =
+    `Sorry, currently can't find the details on this city.
     Please try again later or try another city! <br><br>
     Enjoy this absolutely random picture from this city though!`
     cityWinds.innerHTML = ``
