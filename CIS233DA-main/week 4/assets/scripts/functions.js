@@ -62,19 +62,27 @@ function setMode() {
   var gearshiftIndicator = document.getElementById("gearshiftIndicator");
   var gearshiftImage = document.getElementById("gearshiftImage");
 
-  switch (gearshiftStatus) {
-    case 0:
-      gearshiftStatus = 1;
-      gearshiftIndicator.innerHTML = "ECO PRO";
-      gearshiftImage.style.top = "720px";
-      break;
-    default:
-      gearshiftStatus = 0;
-      gearshiftIndicator.innerHTML = "PARK";
-      gearshiftImage.style.top = "700px";
-      break;
-  }
+  switch(gearShift){
+    case 0: gearShift = 1;
+    gearDash.innerHTML = "ECO PRO";
+    gearImage.style.top = "720px"; 
+    break;
+
+    case 1: gearShift = 2;
+    gearDash.innerHTML = "COMFORT";
+    gearImage.style.top = "740px"; 
+    break;
+
+    case 2: gearShift = 3;
+    gearDash.innerHTML = "SPORT";
+    gearImage.style.top = "760px"; 
+    break;
+
+    default: gearShift = 0;
+    gearImage.style.top = "700px";
+    gearDash.innerHTML = "PARK";
+    break;
 }
 
 
-  
+}
