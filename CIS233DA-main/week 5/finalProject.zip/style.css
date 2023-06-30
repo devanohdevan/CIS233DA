@@ -1,22 +1,27 @@
 body {
     background-color: #ff0000;
     font-family: 'Open Sans', sans-serif;
+    margin: 0; /* Add margin to reset default body margin */
   }
 
   #myBg {
-    position: absolute;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Move the background image behind other content */
   }
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Change height to min-height for centering */
     flex-direction: column;
+    position: relative; /* Add position relative to allow footer positioning */
+    z-index: 1; /* Ensure the content is above the background image */
   }
 
   h1 {
@@ -73,8 +78,8 @@ body {
     width: 100%;
     font-weight: 900;
     text-shadow: 1px 1px 2px black;
+    z-index: 1; /* Ensure the footer is above the background image */
   }
-
   footer a {
     padding: 20px;
     color: white;
@@ -89,3 +94,27 @@ body {
     height: 100vh;
     object-fit: cover;
   }
+
+      /* Media query for screens with a maximum width of 768px (smartphone) */
+      @media (max-width: 768px) {
+        /* Styles for smartphone */
+        body {
+          font-size: 14px;
+        }
+  
+        .card {
+          width: 90%;
+        }
+      }
+  
+      /* Media query for screens with a minimum width of 769px (desktop) */
+      @media (min-width: 769px) {
+        /* Styles for desktop */
+        body {
+          font-size: 16px;
+        }
+  
+        .card {
+          width: 70%;
+        }
+      }
