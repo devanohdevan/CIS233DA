@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <style>
+    #citySelect {
+      margin-bottom: 10px;
+    }
+    #weatherInfo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather App</h1>
+  <label for="citySelect">Select a city:</label>
+  <select id="citySelect">
+    <option value="honolulu">honolulu</option>
+    <option value="oahu">oahu</option>
+    <option value="kailua">kailua</option>
+    <option value="Kapolei">Kapolei</option>
+  </select>
+  <br>
+  <div id="weatherInfo"></div>
+
+  <script>
+    var apiKey = '02994ce022cf3771383f59b05c819664';
+    var citySelect = document.getElementById('citySelect');
+    var weatherInfo = document.getElementById('weatherInfo');
+
+    // Function to fetch weather data for the selected city
+    function fetchWeather(city) {
+      var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=02994ce022cf3771383f59b05c819664`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          var temperature = data.main.temp;
+          var temperatureCelsius = (temperature - 273.15).toFixed(1);
+          var temperatureFahrenheit = ((temperature * 9) / 5 - 459.67).toFixed(1);
+          weatherInfo.innerHTML = `Current Temperature: ${temperatureCelsius}°C / ${temperatureFahrenheit}°F`;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+    // Event listener for city selection change
+    citySelect.addEventListener('change', function () {
+      var selectedCity = citySelect.value;
+      fetchWeather(selectedCity);
+    });
+
+    // Fetch weather for the initially selected city
+    fetchWeather(citySelect.value);
+  </script>
+</body>
+</html>
