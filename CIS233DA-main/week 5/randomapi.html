@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Random Dog Generator</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    img {
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Dog Generator</h1>
+  <button onclick="fetchDogImage()">Generate Random Dog Image</button>
+  <div id="dogImageContainer"></div>
+
+
+  <script src="chatgpt.js"></script>
+ <script>
+    function fetchDogImage() {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+          const dogImageContainer = document.getElementById('dogImageContainer');
+          dogImageContainer.innerHTML = `<img src="${data.message}" alt="Random Dog Image">`;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  </script>
+</body>
+</html>
