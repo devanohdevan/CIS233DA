@@ -84,40 +84,39 @@ var semesters = [
   
     // Repopulate the students list
     populateStudents();
-  }
   
-  // Function to add a student
-  function addStudent() {
-    var classSelect = document.getElementById('classSelect');
-    var studentName = prompt('Enter student name:');
-  
-    if (studentName) {
-      var newStudentId = students.length + 1;
-      var newStudent = {
-        id: newStudentId,
-        classId: parseInt(classSelect.value),
-        name: studentName
-      };
-  
-      students.push(newStudent);
-  
-      // Repopulate the students list
-      populateStudents();
-    }
-  }
-  
-  // Event listener for semester selection change
-  document.getElementById('semesterSelect').addEventListener('change', populateClasses);
-  
-  // Event listener for class selection change
-  document.getElementById('classSelect').addEventListener('change', populateStudents);
-  
-  // Event listener for delete student button click
-  document.getElementById('deleteStudentBtn').addEventListener('click', deleteStudent);
-  
-  // Event listener for add student button click
-  document.getElementById('addStudentBtn').addEventListener('click', addStudent);
-  
-  // Populate the semester select options on page load
-  populateSemesters();
-  
+
+  / Function to add a student
+function addStudent() {
+ var classSelect = document.getElementById('classSelect');
+ var studentName = prompt('Enter student name:');
+
+ if (studentName) {
+    var newStudentId = students.length + 1;
+   var newStudent = {
+     id: newStudentId,
+     classId: parseInt(classSelect.value),
+     name: studentName
+   };
+
+   students.push(newStudent);
+
+   // Repopulate the students list
+         populateStudents();
+       }
+     }
+
+     // Event listener for semester selection change
+     document.getElementById('semesterSelect').addEventListener('change', populateClasses);
+
+   // Event listener for class selection change
+   document.getElementById('classSelect').addEventListener('change', populateStudents);
+
+   // Event listener for delete student button click
+   document.getElementById('deleteStudentBtn').addEventListener('click', deleteStudent);
+
+   // Event listener for add student button click
+   document.getElementById('addStudentBtn').addEventListener('click', addStudent);
+
+   // Populate the semester select options on page load
+   populateSemesters()   ;
